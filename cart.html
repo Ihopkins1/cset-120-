@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - The Big Drink</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Support.html">Support</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        
+        <div class="cart-content">
+            <div class="cart-items">
+                <h2>Items</h2>
+                <div class="incart"></div>
+            </div>
+            
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="total"></div>
+                
+                <!-- Payment Form -->
+                <div class="payment-section">
+                    <h3>Payment Method</h3>
+                    
+                    <!-- Saved Cards Dropdown -->
+                    <div class="saved-cards-section" id="savedCardsSection" style="display: none;">
+                        <label for="savedCards">Use Saved Card:</label>
+                        <select id="savedCards" class="saved-cards-dropdown">
+                            <option value="">Select a saved card</option>
+                        </select>
+                        <span class="or-divider">OR</span>
+                    </div>
+                    
+                    <!-- New Card Form -->
+                    <form id="paymentForm" class="payment-form">
+                        <div class="form-group">
+                            <label for="cardName">Cardholder Name:</label>
+                            <input type="text" id="cardName" name="cardName" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" id="cardNumber" name="cardNumber" required 
+                                   placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date:</label>
+                                <input type="text" id="expiry" name="expiry" required 
+                                       placeholder="MM/YY" maxlength="5">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" name="cvv" required 
+                                       placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="saveCard" name="saveCard">
+                            <label for="saveCard">Save this card for future purchases</label>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="checkout"></div>
+            </div>
+        </div>
+        
+        <div class="back-link">
+            <a href="menu.html">← Back to Menu</a>
+        </div>
+    </div>
+    
+    <script src="cart.js"></script>
+</body>
+</html>

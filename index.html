@@ -3,9 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Big Drink - Arcade Bar & Grill</title>
+    <link rel="stylesheet" href="mainsite.css">
 </head>
 <body>
-    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Support.html">Support</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="introtitle">Welcome to The Big Drink</h1>
+            <p id="introp">Your one-stop destination for arcade fun, epic drinks, and great food!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="aboutus">
+        <h2>About Us</h2>
+        <div class="logo-container">
+            <img src="./visuals/logo.png" alt="The Big Drink Logo" class="logo">
+        </div>
+        
+        <div class="aboutme">
+            <div class="about-content">
+                <div class="about1">
+                    <p>The Big Drink is dedicated to providing a fun and relaxing atmosphere to friends and family alike. Stop by and enjoy a nice cold drink with your co-workers or come in and have a party with your family during gameday. The Big Drink strives to accommodate everyone!</p>
+                </div>
+                <div class="about2">
+                    <p>The Big Drink was founded by Ishaan Hopkins and Adonis Pearson in an effort to create a space for those looking to wind down and forget about their troubles. The two managed to finally bring their dream to life after years of hard work and dedication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section class="dining">
+        <div class="dining-content">
+            <h2>Experience The Vibe</h2>
+            <p class="dining-intro">Step into a world where arcade nostalgia meets modern bar culture. The Big Drink isn't just a place to grab a drink—it's an experience!</p>
+            
+            <div class="dining-features">
+                <div class="feature">
+                    <h4>Games & Entertainment</h4>
+                    <p>Challenge your friends on classic arcade games while sipping on signature cocktails. From retro favorites to modern hits, we've got the games that keep the good times rolling.</p>
+                </div>
+                
+                <div class="feature">
+                    <h4>Spacious & Versatile</h4>
+                    <p>With over 20 available tables and two private rooms for booking, we can host everything from casual hangouts to private parties and corporate events. Need special accommodations? We've got you covered!</p>
+                </div>
+                
+                <div class="feature">
+                    <h4>The Perfect Atmosphere</h4>
+                    <p>Whether you're celebrating a victory, unwinding after work, or hosting game day with the squad, our vibrant atmosphere and friendly staff ensure every visit is memorable. Come for the drinks, stay for the vibe!</p>
+                </div>
+            </div>
+            
+            <p class="dining-cta">Ready to level up your night? Stop by and see what makes The Big Drink the ultimate destination for fun!</p>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="hours-section">
+        <h3>Hours of Operation</h3>
+        <ul class="hours-list">
+            <li><span class="day">Monday - Thursday:</span> <span class="time">11:00 AM - 11:00 PM</span></li>
+            <li><span class="day">Friday - Saturday:</span> <span class="time">11:00 AM - 2:00 AM</span></li>
+            <li><span class="day">Sunday:</span> <span class="time">12:00 PM - 10:00 PM</span></li>
+        </ul>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="specialties">
+        <h3>Our Specialties</h3>
+        <div class="specialties-list">
+            <details class="specialty-item">
+                <summary class="specialty-title">🍹 Signature Cocktails & Drinks</summary>
+                <div class="specialty-content">
+                    <div class="specialty-display">
+                        <div class="specialty-image">
+                            <img src="./visuals/cocktails-placeholder.png" alt="Signature Cocktails" onerror="this.style.display='none'">
+                        </div>
+                        <div class="specialty-description">
+                            <h4>Signature Cocktails & Drinks</h4>
+                            <p>Experience our game-inspired drink menu featuring creative cocktails that pack a punch! From the Game Over Margarita with a spicy jalapeño kick to the High Score Hurricane loaded with tropical flavors, each drink is crafted to fuel your fun. Our Pixel Punch glows with blue curaçao, while the Boss Battle Bourbon Smash brings bold bourbon and fresh blackberries together. Don't miss our virgin options like the Pac-Man Piña Colada!</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            
+            <details class="specialty-item">
+                <summary class="specialty-title">🍺 Craft Beers & Drafts</summary>
+                <div class="specialty-content">
+                    <div class="specialty-display">
+                        <div class="specialty-image">
+                            <img src="./visuals/beers-placeholder.png" alt="Craft Beers" onerror="this.style.display='none'">
+                        </div>
+                        <div class="specialty-description">
+                            <h4>Craft Beers & Drafts</h4>
+                            <p>Our rotating selection of craft beers features the best local IPAs, crisp lagers, and seasonal brews. Whether you're a hop head or prefer something smooth and easy-drinking, we've got you covered. Grab a bucket of 5 domestic beers perfect for sharing with the squad during game time. Our draft selection changes regularly, so there's always something new to discover!</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            
+            <details class="specialty-item">
+                <summary class="specialty-title">🍔 Epic Eats & Shareables</summary>
+                <div class="specialty-content">
+                    <div class="specialty-display">
+                        <div class="specialty-image">
+                            <img src="./visuals/food-placeholder.png" alt="Epic Eats" onerror="this.style.display='none'">
+                        </div>
+                        <div class="specialty-description">
+                            <h4>Epic Eats & Shareables</h4>
+                            <p>Fuel up with our epic menu of shareables and arcade-worthy eats! Our Loaded Game Day Nachos come piled high with cheese, jalapeños, and all the fixings. Buffalo Boneless Wings are tossed in your choice of sauce - from classic Buffalo to sweet Teriyaki. Try our Arcade Sliders for a mini burger experience, or go all-in with Loaded Cheese Fries topped with bacon and ranch. Perfect for groups and guaranteed to keep you powered up!</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Order Online Section -->
+    <section class="order-online">
+        <h3>Order Online</h3>
+        <p>Interested in trying our cuisine but not looking to step out? Click below to see our menu for yourself and make a delivery order.</p>
+        <a href="menu.html" class="cta-button">View Menu</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contacts">
+        <h3>Contact Us</h3>
+        <p>Have questions or want to book a party? Reach out to us!</p>
+        <ul class="contact-list">
+            <li>📧 <strong>Email:</strong> info@thebigdrink.com</li>
+            <li>📞 <strong>Phone:</strong> (555) 123-4567</li>
+            <li>📍 <strong>Address:</strong> 123 Drink St, Beverage City, BC 12345</li>
+        </ul>
+    </section>
+
+    <!-- Message Forum -->
+    <section class="message-forum">
+        <h3>Leave Us a Message</h3>
+        <p>Got feedback, suggestions, or just want to say hi? Drop us a message below!</p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us what's on your mind..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 The Big Drink. All rights reserved.</p>
+    </footer>
+
+    <script src="mainsite.js"></script>
 </body>
 </html>

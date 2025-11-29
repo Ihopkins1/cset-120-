@@ -1,0 +1,679 @@
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* ===================================
+   NAVIGATION
+   =================================== */
+.nav {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-brand p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e2b63d;
+  margin: 0;
+}
+
+.navlogo {
+  height: 50px;
+  width: auto;
+}
+
+.navlink {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navlink a {
+  text-decoration: none;
+  color: #e2b63d;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.navlink a:hover {
+  color: #41aae7;
+}
+
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(./visuals/download.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 8rem 2rem;
+  text-align: center;
+  color: #41aae7;
+}
+
+.hero p{
+  color: #e2b63d;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#introtitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#introp {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================
+   ABOUT SECTION
+   =================================== */
+.aboutus {
+  padding: 4rem 2rem;
+  background-color: #320646;
+  text-align: center;
+  /* Purple glow effect */
+  box-shadow: 
+    0 0 40px rgba(138, 43, 226, 0.6),        /* Outer purple glow */
+    0 0 80px rgba(138, 43, 226, 0.4),        /* Wider outer glow */
+    inset 0 0 60px rgba(138, 43, 226, 0.2);  /* Inner purple glow */
+}
+
+.aboutus h2 {
+  font-size: 2.5rem;
+  color: #41aae7;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  margin: 2rem auto;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutme {
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+              url(./visuals/download.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about1, .about2 {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1.5rem 0;
+  text-align: left;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+/* ===================================
+   DINING SECTION
+   =================================== */
+.dining {
+  padding: 12rem 3rem;
+  background: linear-gradient(rgba(50, 6, 70, 0.85), rgba(50, 6, 70, 0.85)),
+              url(./visuals/arcade.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dining-content {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.dining h2 {
+  font-size: 3rem;
+  color: #41aae7;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dining-intro {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.dining-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(65, 170, 231, 0.3);
+}
+
+.feature h4 {
+  font-size: 1.4rem;
+  color: #41aae7;
+  margin-bottom: 1rem;
+}
+
+.feature p {
+  font-size: 1.1rem;
+  color: #e6eef6;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.dining-cta {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-top: 3rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dining-visual {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dining {
+    padding: 6rem 2rem;
+  }
+  
+  .dining h2 {
+    font-size: 2rem;
+  }
+  
+  .dining-intro {
+    font-size: 1.1rem;
+  }
+  
+  .dining-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ===================================
+   HOURS SECTION
+   =================================== */
+.hours-section {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hours-section h3 {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+}
+
+.hours-list {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.hours-list li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day {
+  font-weight: bold;
+}
+
+.time {
+  color: #f39c12;
+}
+
+/* ===================================
+   SPECIALTIES SECTION
+   =================================== */
+.specialties {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.specialties h3 {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+}
+
+.specialties-list {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Style the details element */
+.specialty-item {
+  margin: 0.5rem 0;
+  background: #fff;
+  border-left: 4px solid #f39c12;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.specialty-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-left-color: #e67e22;
+}
+
+/* Style the summary (clickable part) */
+.specialty-title {
+  display: block;
+  font-size: 1.2rem;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+/* Remove default marker */
+.specialty-item summary {
+  list-style: none;
+}
+
+.specialty-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Style when open */
+.specialty-item[open] {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  border-left-color: #1a1a2e;
+}
+
+.specialty-item[open] .specialty-title {
+  color: #fff;
+}
+
+/* Dropdown Content */
+.specialty-content {
+  padding: 1rem;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.specialty-display {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.specialty-image {
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialty-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.specialty-description {
+  text-align: left;
+}
+
+.specialty-description h4 {
+  font-size: 1.8rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.specialty-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .specialty-display {
+    grid-template-columns: 1fr;
+  }
+  
+  .specialty-image {
+    min-height: 250px;
+  }
+}
+
+/* ===================================
+   ORDER ONLINE SECTION
+   =================================== */
+.order-online {
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.order-online h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.order-online p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #f39c12;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.cta-button:hover {
+  background: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
+}
+
+/* ===================================
+   CONTACT SECTION
+   =================================== */
+.contacts {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contacts h3 {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.contacts p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.contact-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-list li {
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.contact-list strong {
+  color: #1a1a2e;
+}
+
+/* ===================================
+   MESSAGE FORUM
+   =================================== */
+.message-forum {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message-forum h3 {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.message-forum p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f39c12;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navlink {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #introtitle {
+    font-size: 2rem;
+  }
+  
+  #introp {
+    font-size: 1rem;
+  }
+  
+  .hero {
+    padding: 4rem 1rem;
+  }
+  
+  .hours-list li {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand p {
+    font-size: 1.2rem;
+  }
+  
+  .navlogo {
+    height: 40px;
+  }
+  
+  #introtitle {
+    font-size: 1.5rem;
+  }
+  
+  .aboutus h2,
+  .dining h2,
+  .hours-section h3,
+  .specialties h3,
+  .order-online h3,
+  .contacts h3,
+  .message-forum h3 {
+    font-size: 1.5rem;
+  }
+}
