@@ -52,6 +52,11 @@ function updateStats() {
     // Get reservations
     const reservations = JSON.parse(localStorage.getItem('reservations')) || [];
     document.getElementById('totalReservations').textContent = `${reservations.length} Total`;
+
+    // Get contact messages - count unread
+    const contactMessages = JSON.parse(localStorage.getItem('contactMessages')) || [];
+    const unreadMessages = contactMessages.filter(msg => msg.status === 'unread').length;
+    document.getElementById('unreadMessages').textContent = `${unreadMessages} Unread`;
 }
 
 // Logout functionality

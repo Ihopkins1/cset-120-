@@ -109,7 +109,7 @@ loginForm.addEventListener('submit', (e) => {
     if (admin) {
         const adminUser = {
             name: 'Admin',
-            email: ADMIN_EMAIL,
+            email: admin.email,
             isAdmin: true,
             loggedInAt: new Date().toISOString()
         };
