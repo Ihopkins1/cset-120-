@@ -1,4 +1,4 @@
-// Cart state
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let savedCards = JSON.parse(localStorage.getItem('savedCards')) || [];
 
@@ -141,6 +141,27 @@ function addToCart(name, price) {
     cart.push({ name, price });
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
+    
+    // Show popup notification
+    showCartPopup('Cart Updated✅');
+}
+
+// Show cart popup notification
+function showCartPopup(message) {
+    const popup = document.getElementById('cartPopup');
+    if (popup) {
+        const messageElement = document.getElementById('popupMessage');
+        messageElement.textContent = message;
+        
+        // Remove show class if it exists
+        popup.classList.remove('show');
+        
+        // Trigger reflow to restart animation
+        void popup.offsetWidth;
+        
+        // Add show class
+        popup.classList.add('show');
+    }
 }
 
 // Remove item from cart
@@ -188,6 +209,43 @@ function checkout() {
     }
     
     const total = cart.reduce((sum, item) => sum + item.price, 0);
+    
+    // Get current user info
+    const currentUser = JSON.parse(localStorage.getItem('currentUser')) || 
+                       JSON.parse(sessionStorage.getItem('currentUser'));
+    
+    // Create order object
+    const order = {
+        id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+        items: cart.map(item => ({
+            name: item.name,
+            price: item.price,
+            quantity: 1
+        })),
+        total: total,
+        customerName: currentUser ? currentUser.name : 'Guest',
+        customerEmail: currentUser ? currentUser.email : '',
+        status: 'pending',
+        date: new Date().toISOString()
+    };
+    
+    // Consolidate duplicate items
+    const consolidatedItems = [];
+    order.items.forEach(item => {
+        const existing = consolidatedItems.find(ci => ci.name === item.name && ci.price === item.price);
+        if (existing) {
+            existing.quantity++;
+        } else {
+            consolidatedItems.push({...item});
+        }
+    });
+    order.items = consolidatedItems;
+    
+    // Save order to localStorage
+    let orders = JSON.parse(localStorage.getItem('orders')) || [];
+    orders.push(order);
+    localStorage.setItem('orders', JSON.stringify(orders));
+    
     alert(`Thank you for your purchase!\nTotal: $${total.toFixed(2)}\n\nYour order will be ready soon!`);
     
     // Clear cart

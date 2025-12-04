@@ -3,42 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu - The Big Drink</title>
+    <link rel="stylesheet" href="mainsite.css">
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="Support.html">Support</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="orderHistoryNav" style="display: none;"><a href="order-history.html">Order History</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" class="nav-login">Login/Signup</a></li>
+        </ul>
+    </nav>
+
     <div class="Menu">
         <h2>Power-Up Menu</h2>
         <p>Fuel your fun with our game-inspired drinks and epic eats! Whether you're crushing high scores or just hanging with friends, we've got the perfect combo to keep you going!</p>
         
-        <h3>Signature Cocktails & Drinks</h3>
-        <ul>
-            <li><strong>Game Over Margarita</strong> - Tequila, triple sec, lime, with a spicy jalapeño kick - $12.99 <button onclick="addToCart('Game Over Margarita', 12.99)">Add to Cart</button></li>
-            <li><strong>High Score Hurricane</strong> - Rum, passion fruit, orange & pineapple juice</li>
-            <li><strong>Pixel Punch</strong> - Vodka, blue curaçao, lemonade, candy rim</li>
-            <li><strong>Extra Life Long Island</strong> - Classic Long Island with a cherry bomb twist</li>
-            <li><strong>Boss Battle Bourbon Smash</strong> - Bourbon, mint, blackberries, ginger beer</li>
-            <li><strong>Pac-Man Piña Colada</strong> - Rum, coconut cream, pineapple (virgin option available)</li>
-            <li><strong>Retro Root Beer Float</strong> - Vanilla vodka & root beer with ice cream</li>
+        <h3>Signature Drinks</h3>
+        <ul id="cocktailsMenu">
+          
         </ul>
         
         <h3>Craft Beers & Drafts</h3>
-        <ul>
-            <li>Rotating IPAs, Lagers, and Local Craft Selection</li>
-            <li>Bucket of 5 Domestic Beers - Perfect for the squad!</li>
+        <ul id="beersMenu">
+         
         </ul>
         
-        <h3>Epic Eats & Shareables</h3>
-        <ul>
-            <li><strong>Loaded Game Day Nachos</strong> - Cheese, jalapeños, sour cream, guac, salsa</li>
-            <li><strong>Buffalo Boneless Wings</strong> - Tossed in your choice: Buffalo, BBQ, Teriyaki, or Garlic Parmesan</li>
-            <li><strong>Arcade Sliders</strong> - Mini burgers with cheese, pickles & special sauce</li>
-            <li><strong>Mozzarella Sticks</strong> - Crispy & golden with marinara dip</li>
-            <li><strong>Loaded Cheese Fries</strong> - Bacon, cheddar, ranch drizzle</li>
-            <li><strong>Pretzel Bites</strong> - Warm soft pretzels with cheese & mustard</li>
-            <li><strong>Power-Up Pizza</strong> - Personal 10" pizza, choose your toppings</li>
+        <h3>Eats|Shareables</h3>
+        <ul id="foodMenu">
+         
         </ul>
     </div>
+
+    <!-- Popup Notification -->
+    <div id="cartPopup" class="cart-popup">
+        <span id="popupMessage">Cart Updated✅</span>
+    </div>
+
+    <script src="menu.js"></script>
     <script src="cart.js"></script>
+    <script src="nav-control.js"></script>
 </body>
 </html>

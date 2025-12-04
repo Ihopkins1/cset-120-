@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management - Manager</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink - Manager</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="manager.html">Dashboard</a></li>
+            <li><a href="index.html">View Site</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Admin Management</h1>
+        <p class="welcome-message">Add or remove admin accounts</p>
+
+        <!-- Add New Admin Form -->
+        <div class="menu-form-container">
+            <h2>Add New Admin</h2>
+            <form id="addAdminForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adminEmail">Admin Email:</label>
+                        <input type="email" id="adminEmail" required placeholder="admin@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password:</label>
+                        <input type="password" id="adminPassword" required placeholder="Enter password">
+                    </div>
+                </div>
+
+                <button type="submit" class="card-btn">Add Admin</button>
+            </form>
+        </div>
+
+        <!-- Current Admins -->
+        <div class="menu-items-container">
+            <h2>Current Admin Accounts</h2>
+            <div id="adminsContainer" class="users-container">
+                <!-- Admins will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="manager.js"></script>
+    <script src="manager-admins.js"></script>
+</body>
+</html>

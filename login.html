@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup - The Big Drink</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="Support.html">Support</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="orderHistoryNav" style="display: none;"><a href="order-history.html">Order History</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" class="nav-login">Login/Signup</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-toggle">
+                <button class="toggle-btn active" id="loginToggle">Login</button>
+                <button class="toggle-btn" id="signupToggle">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active">
+                <h2>Welcome Back!</h2>
+                <p class="form-subtitle">Login to access your account</p>
+
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required placeholder="Enter your password">
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="auth-btn">Login</button>
+
+                <p class="form-footer">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form">
+                <h2>Create Account</h2>
+                <p class="form-subtitle">Sign up to get started</p>
+
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="email" required placeholder="your.email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required placeholder="Create a password">
+                </div>
+
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password:</label>
+                    <input type="password" id="signupConfirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <span>I agree to the Terms & Conditions</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-btn">Sign Up</button>
+
+                <p class="form-footer">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="nav-control.js"></script>
+</body>
+</html>

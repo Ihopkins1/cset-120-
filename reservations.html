@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - The Big Drink</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Support.html">Support</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" class="nav-login">Login/Signup</a></li>
+        </ul>
+    </nav>
+
+    <div class="Booking">
+        <h2>BOOKING</h2>
+        <p>Reserve your spot and get ready for an epic gaming experience! Gather your crew and secure your table at The Big Drink.</p>
+        
+        <form class="booking-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <input type="number" id="guests" name="guests" min="1" max="20" required placeholder="2">
+                </div>
+
+                <div class="form-group">
+                    <label for="table">Table Preference</label>
+                    <select id="table" name="table" required>
+                        <option value="">Select a preference</option>
+                        <option value="near-arcade">Near Arcade Games</option>
+                        <option value="near-bar">Near Bar</option>
+                        <option value="quiet">Quiet Corner</option>
+                        <option value="group">Large Group Area</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="special">Special Requests</label>
+                <textarea id="special" name="special" placeholder="Birthday, celebration, dietary restrictions, etc."></textarea>
+            </div>
+
+            <button type="submit" class="booking-button">CONFIRM BOOKING</button>
+        </form>
+
+        <div class="booking-info">
+            <h3>⏰ BOOKING INFO</h3>
+            <p><strong>Hours:</strong> Mon-Thu 5PM-11PM | Fri-Sun 5PM-1AM</p>
+            <p><strong>Min Party Size:</strong> 2 Guests</p>
+            <p><strong>Max Party Size:</strong> 20 Guests</p>
+            <p><strong>Contact:</strong> (555) 123-4567 or reservations@thebigdrink.com</p>
+        </div>
+    </div>
+
+    <!-- Popup Notification -->
+    <div id="bookingPopup" class="booking-popup">
+        <span id="popupMessage">Booking Confirmed✅</span>
+    </div>
+
+    <script src="reservation.js"></script>
+</body>
+</html>

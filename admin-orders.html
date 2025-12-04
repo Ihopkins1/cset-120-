@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Admin</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink - Admin</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="index.html">View Site</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Order History</h1>
+        <p class="welcome-message">View and manage customer orders</p>
+
+        <!-- Filter Buttons -->
+        <div class="order-filters">
+            <button class="filter-btn active" data-status="all">All Orders</button>
+            <button class="filter-btn" data-status="pending">Pending</button>
+            <button class="filter-btn" data-status="processing">Processing</button>
+            <button class="filter-btn" data-status="finished">Finished</button>
+            <button class="filter-btn" data-status="cancelled">Cancelled</button>
+        </div>
+
+        <!-- Orders List -->
+        <div class="orders-container" id="ordersContainer">
+            <!-- Orders will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="admin-orders.js"></script>
+</body>
+</html>

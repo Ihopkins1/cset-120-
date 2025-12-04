@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations - Admin</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink - Admin</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="index.html">View Site</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Customer Reservations</h1>
+        <p class="welcome-message">View and manage table reservations</p>
+
+        <!-- Reservations List -->
+        <div class="reservations-container" id="reservationsContainer">
+            <!-- Reservations will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="admin-reservations.js"></script>
+</body>
+</html>

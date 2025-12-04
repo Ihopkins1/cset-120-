@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Management - Admin</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink - Admin</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="index.html">View Site</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Menu Management</h1>
+        <p class="welcome-message">Add, edit, or remove menu items</p>
+
+        <!-- Add New Item Form -->
+        <div class="menu-form-container">
+            <h2>Add New Menu Item</h2>
+            <form id="addMenuItemForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemName">Item Name:</label>
+                        <input type="text" id="itemName" required placeholder="e.g., Power-Up Punch">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemPrice">Price ($):</label>
+                        <input type="number" id="itemPrice" step="0.01" min="0" required placeholder="9.99">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemCategory">Category:</label>
+                    <select id="itemCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="cocktails">Signature Cocktails</option>
+                        <option value="beers">Craft Beers</option>
+                        <option value="food">Epic Eats</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemDescription">Description:</label>
+                    <textarea id="itemDescription" rows="3" placeholder="Brief description of the item"></textarea>
+                </div>
+
+                <button type="submit" class="card-btn">Add Item</button>
+            </form>
+        </div>
+
+        <!-- Current Menu Items -->
+        <div class="menu-items-container">
+            <h2>Current Menu Items</h2>
+            
+            <!-- Cocktails Section -->
+            <div class="menu-category">
+                <h3>🍹 Signature Drinks</h3>
+                <div id="cocktailsList" class="items-list">
+                    ul>
+                        <li><strong>High Score Hurricane<
+strong> - Rum, passion fruit, orange & pineapple juice - $14.99</li>
+                        <li><strong>Pixel Punch</strong> - Vo ka, blue curaçao, lemonade, candy rim - $11.99</li>
+                        <li><strong>Espresso Martini</strong> - Class c Long Island with a cherry bomb twist - $15.99</li>
+                        <li><strong>Pac-Man Piña Colada</strong> - Rum, coconut cream, pineapple (virgin option available) - $12.99</li>
+                        <li><strong>Retro Root Beer Float</strong> - Vanilla vodka & root beer with ice cream - $9.99</li>
+                    </ul>
+                </di                  <ul>
+                        <li><strong>High Score Hurricane</strong> - Rum, passion fruit, orange & pineapple juice - $14.99</li>
+                        <li><strong>Pixel Punc>
+                    <ul>
+                    </ul>
+
+                        <li><strong>Espresso Martini</strong> - Classic Long Island with a cherry bomb twist - $15.99</items-list">
+                    <ul>
+                        <li><strong>Game-Day Nachos</strong> - Cheese, jalapeños, sour cream, guac, salsa - $10.99</li>
+                        <li><strong>Buffalo Boneless Wings</strong> - Tossed in your choice: Buffalo, BBQ, Teriyaki, or Garlic Parmesan - $11.99</li>
+                        <li><strong>Arcade Sliders</strong> - Mini burgers with cheese, pickles & special sauce - $9.99</li>
+                        <ll><strong>Mozzarella Reload</sirong> - Crispy & gold>n with arinara dip - $7.99</li>
+                        <li><strong>Loaded Chee
+e Fries</strong> - Bacon, cheddar, ranch drizzle   $8.99</li>
+                        < i><strong>Power-Up P zza</  rong> - Personal 10  pizza, choose your toppings - $12.99</li>
+                    </ul 
+                                 <li><strong>Pac-Man Piña Colada</strong> - Rum, coconut cream, pineapple (virgin option available) - $12.99</li>
+                        <li><strong>Retro Root Beer Float</strong> - Vanilla vodka & root beer with ice cream - $9.99</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Beers Section -->
+            <div class="menu-category">
+                <h3>🍺 Craft Beers|Drafts</h3>
+                <div id="beersList" class="items-list">
+                    <ul>
+                        <li><strong>Bucket of 5 Beers</strong> - Perfect for the squad! - $24.99</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Food Section -->
+            <div class="menu-category">
+                <h3>Eats|Shareables</h3>
+                <div id="foodList" class="items-list">
+                    <ul>
+                        <li><strong>Game-Day Nachos</strong> - Cheese, jalapeños, sour cream, guac, salsa - $10.99</li>
+                        <li><strong>Buffalo Boneless Wings</strong> - Tossed in your choice: Buffalo, BBQ, Teriyaki, or Garlic Parmesan - $11.99</li>
+                        <li><strong>Arcade Sliders</strong> - Mini burgers with cheese, pickles & special sauce - $9.99</li>
+                        <li><strong>Mozzarella Reload</strong> - Crispy & golden with marinara dip - $7.99</li>
+                        <li><strong>Loaded Cheese Fries</strong> - Bacon, cheddar, ranch drizzle - $8.99</li>
+                        <li><strong>Power-Up Pizza</strong> - Personal 10" pizza, choose your toppings - $12.99</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="admin-menu.js"></script>
+</body>
+</html>

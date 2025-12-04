@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restock Board - Manager</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink - Manager</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="manager.html">Dashboard</a></li>
+            <li><a href="index.html">View Site</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Restock Board</h1>
+        <p class="welcome-message">Track items that need reordering</p>
+
+        <!-- Add Restock Item Form -->
+        <div class="menu-form-container">
+            <h2>Add Item to Restock List</h2>
+            <form id="addRestockForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemName">Item Name:</label>
+                        <input type="text" id="itemName" required placeholder="e.g., Vodka, Chicken Wings, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemQuantity">Quantity Needed:</label>
+                        <input type="text" id="itemQuantity" required placeholder="e.g., 5 bottles, 10 lbs, etc.">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemPriority">Priority Level:</label>
+                    <select id="itemPriority" required>
+                        <option value="">Select Priority</option>
+                        <option value="low">Low - Can wait</option>
+                        <option value="medium">Medium - Needed soon</option>
+                        <option value="high">High - Urgent</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemNotes">Notes (Optional):</label>
+                    <textarea id="itemNotes" rows="3" placeholder="Additional notes or supplier information"></textarea>
+                </div>
+
+                <button type="submit" class="card-btn">Add to Restock List</button>
+            </form>
+        </div>
+
+        <!-- Current Restock Items -->
+        <div class="menu-items-container">
+            <h2>Items Needing Reorder</h2>
+            
+            <!-- High Priority Section -->
+            <div class="menu-category">
+                <h3 style="color: #e74c3c;">🔴 High Priority</h3>
+                <div id="highPriorityList" class="items-list"></div>
+            </div>
+
+            <!-- Medium Priority Section -->
+            <div class="menu-category">
+                <h3 style="color: #f39c12;">🟡 Medium Priority</h3>
+                <div id="mediumPriorityList" class="items-list"></div>
+            </div>
+
+            <!-- Low Priority Section -->
+            <div class="menu-category">
+                <h3 style="color: #2ecc71;">🟢 Low Priority</h3>
+                <div id="lowPriorityList" class="items-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="manager.js"></script>
+    <script src="manager-restock.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - The Big Drink</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="Support.html">Support</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="order-history.html">Order History</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="login.html" class="nav-login">Login/Signup</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>My Order History</h1>
+        <p class="welcome-message" id="welcomeMessage">View your orders and reservations</p>
+
+        <!-- Orders Section -->
+        <div class="history-section">
+            <h2 style="color: #f39c12; margin-bottom: 20px;">📦 My Orders</h2>
+            <div id="ordersContainer" class="orders-container">
+                <!-- Orders will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Reservations Section -->
+        <div class="history-section" style="margin-top: 40px;">
+            <h2 style="color: #f39c12; margin-bottom: 20px;">📅 My Reservations</h2>
+            <div id="reservationsContainer" class="reservations-container">
+                <!-- Reservations will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="order-history.js"></script>
+</body>
+</html>

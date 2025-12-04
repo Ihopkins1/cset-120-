@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - The Big Drink</title>
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <img src="./visuals/ecc31560-63d1-44b4-bb44-d9dc23fcc657-removebg-preview.png" alt="The Big Drink Logo" class="navlogo">
+            <p>The Big Drink - Admin</p>
+        </div>
+        <ul class="navlink">
+            <li><a href="admin.html" class="active">Dashboard</a></li>
+            <li><a href="index.html">View Site</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <p class="welcome-message">Welcome, <span id="adminName">Admin</span>!</p>
+
+        <div class="dashboard-grid">
+            <!-- Menu Management Card -->
+            <div class="admin-card" onclick="window.location.href='admin-menu.html'">
+                <div class="card-icon">🍔</div>
+                <h2>Menu Management</h2>
+                <p>Add, edit, or remove menu items</p>
+                <button class="card-btn">Manage Menu</button>
+            </div>
+
+            <!-- Order History Card -->
+            <div class="admin-card" onclick="window.location.href='admin-orders.html'">
+                <div class="card-icon">📦</div>
+                <h2>Order History</h2>
+                <p>View and manage customer orders</p>
+                <div class="card-stats">
+                    <span class="stat-badge pending" id="pendingOrders">0 Pending</span>
+                </div>
+                <button class="card-btn">View Orders</button>
+            </div>
+
+            <!-- Reservations Card -->
+            <div class="admin-card" onclick="window.location.href='admin-reservations.html'">
+                <div class="card-icon">📅</div>
+                <h2>Reservations</h2>
+                <p>View customer reservations</p>
+                <div class="card-stats">
+                    <span class="stat-badge info" id="totalReservations">0 Total</span>
+                </div>
+                <button class="card-btn">View Reservations</button>
+            </div>
+
+            <!-- User Management Card -->
+            <div class="admin-card" onclick="window.location.href='admin-users.html'">
+                <div class="card-icon">👥</div>
+                <h2>User Management</h2>
+                <p>View all registered users</p>
+                <div class="card-stats">
+                    <span class="stat-badge info" id="totalUsersCard">0 Users</span>
+                </div>
+                <button class="card-btn">View Users</button>
+            </div>
+
+            <!-- Quick Stats Card -->
+            <div class="admin-card stats-card">
+                <div class="card-icon">📊</div>
+                <h2>Quick Stats</h2>
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Menu Items:</span>
+                        <span class="stat-value" id="totalMenuItems">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Orders:</span>
+                        <span class="stat-value" id="totalOrders">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Registered Users:</span>
+                        <span class="stat-value" id="totalUsers">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
