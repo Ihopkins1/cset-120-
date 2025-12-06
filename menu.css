@@ -296,7 +296,81 @@ body::before{
 	text-transform:uppercase;
 }
 
-/* Cart Popup Notification */
+.pacman{
+	position:fixed;
+	width:40px;
+	height:40px;
+	background:radial-gradient(circle at 30% 30%, var(--accent-3), var(--accent-3) 40%, transparent 40%);
+	border-radius:50%;
+	z-index:5000;
+	pointer-events:none;
+	filter:drop-shadow(0 0 10px rgba(255,190,11,0.8));
+	clip-path:polygon(30% 30%, 70% 20%, 70% 80%, 30% 70%);
+	animation:pacmanPath 12s infinite linear, mouthAnimation 0.3s infinite ease-in-out;
+}
+
+.pacman::before{
+	content:'';
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	width:15px;
+	height:15px;
+	background:#0a0e27;
+	border-radius:50%;
+}
+
+.pacman::after{
+	content:'';
+	position:absolute;
+	top:8px;
+	left:10px;
+	width:5px;
+	height:5px;
+	background:var(--accent);
+	border-radius:50%;
+	animation:eyeBlink 0.5s infinite;
+}
+
+@keyframes eyeBlink{
+	0%, 49%, 100%{ opacity:1; }
+	50%, 99%{ opacity:0.3; }
+}
+
+@keyframes pacmanPath{
+	0%{
+		left:0;
+		top:0;
+		transform:scaleX(1);
+	}
+	25%{
+		left:calc(100vw - 40px);
+		top:0;
+		transform:scaleX(-1);
+	}
+	50%{
+		left:calc(100vw - 40px);
+		top:calc(100vh - 40px);
+		transform:scaleX(-1) scaleY(-1);
+	}
+	75%{
+		left:0;
+		top:calc(100vh - 40px);
+		transform:scaleX(1) scaleY(-1);
+	}
+	100%{
+		left:0;
+		top:0;
+		transform:scaleX(1);
+	}
+}
+
+@keyframes mouthAnimation{
+	0%, 100%{ clip-path:polygon(30% 30%, 70% 20%, 70% 80%, 30% 70%); }
+	50%{ clip-path:polygon(30% 30%, 70% 30%, 70% 70%, 30% 70%); }
+}
+
 .cart-popup{
 	position:fixed;
 	right:20px;
